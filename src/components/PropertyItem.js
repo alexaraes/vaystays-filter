@@ -1,14 +1,30 @@
 import React from 'react';
 
-const PropertyItem = (property) => {
-	return (
-		<div className="gif-item">
-			<span>{property.property.title}</span>
-			<span>{property.property.user_rating}</span>
-			<span>{property.property.sleeps_comfortably}</span>
-			<span>{property.property.sleeps_max}</span>
-		</div>
-	)
-};
+class PropertyItem extends React.Component {
+  render() {
+    return (
+      <div>
+      	<div className="property-item">
+          	<div className="property-title property-info">Property Name</div>
+          	<div className="property-title property-info">User Rating</div>
+          	<div className="property-title property-info">Sleeps Max</div>
+          	<div className="property-title property-info">Sleeps Comfortably</div>
+          	<div className="property-title property-info">Tiebreaker</div>
+          </div>
+      {this.props.data.map(function(item){
+        return (
+          <div key={item.id} className="property-item">
+          	<div className="property-info">{item.title}</div>
+          	<div className="property-info">{item.user_rating}</div>
+          	<div className="property-info">{item.sleeps_max}</div>
+          	<div className="property-info">{item.sleeps_comfortably}</div>
+          	<div className="property-info">{item.tiebreaker_sort}</div>
+          </div>
+        );
+      })}
+      </div>
+    );
+  }
+}
 
 export default PropertyItem;

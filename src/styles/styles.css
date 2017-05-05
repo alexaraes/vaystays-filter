@@ -1,29 +1,35 @@
 .app {
     margin: 3em auto;
     width: 90%;
+    font-family: 'Helvetica';
 }
 
-.gif-item {
+.property-item {
     box-shadow: 2px 2px 4px 0 #ccc;
     box-sizing: border-box;
-    display: block;
-    margin: 0 0 1.5em;
+    margin: 30px;
     padding: 1em;
     width: 100%;
 }
 
-.gif-item img {
-    width: 100%;
+.property-title {
+    font-size: 20px;
 }
 
-.gif-list {
+.property-info {
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.property-list {
     column-gap: 1.5em;
     font-size: .85em;
     margin: 1.5em 0;
     padding: 0;
 }
 
-input {
+.filter {
     display: block;
     font-size: 22px;
     height: 50px;
