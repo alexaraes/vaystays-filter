@@ -22,7 +22,7 @@ class PropertyList extends React.Component {
 
 	returnFilterState(val) {
 		this.setState({
-			data: this.state.data.sort(this.filterList(val))
+			data: this.props.data.sort(this.filterList(val))
 		})
 	}
 
@@ -52,7 +52,6 @@ class PropertyList extends React.Component {
 		return (
 			<div className="property-list">
 				<SearchBar
-				data={this.state.data}
 				changeOption={this.returnFilterState}
 				searchBeds={this.searchBeds}/>
 				<PropertyItem data={this.state.data} />
