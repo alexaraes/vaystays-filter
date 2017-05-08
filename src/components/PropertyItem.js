@@ -14,7 +14,7 @@ class PropertyItem extends React.Component {
       {this.props.data.map(function(item){
         return (
           <div key={item.id} className="property-item">
-          	<div className="property-info">{item.title}</div>
+          	<div className="property-info name">{item.title}</div>
           	<div className="property-info">{item.user_rating}</div>
           	<div className="property-info">{item.sleeps_max}</div>
           	<div className="property-info">{item.sleeps_comfortably}</div>
