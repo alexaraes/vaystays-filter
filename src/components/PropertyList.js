@@ -2,11 +2,11 @@ import React from 'react';
 import PropertyItem from './PropertyItem';
 import SearchBar from './SearchBar';
 
+import results from '../results.json';
+
 const tieBreaker = (a, b) => b.tiebreaker_sort - a.tiebreaker_sort;
 const userRating = (a,b) => b.user_rating - a.user_rating || tieBreaker(a, b);
 const sleepsMax = (a, b) => b.sleeps_max - a.sleeps_max || b.sleeps_comfortably - a.sleeps_comfortably || tieBreaker(a, b);
-
-var maxBedsArr = [];
 
 class PropertyList extends React.Component {
   constructor(props) {
@@ -38,7 +38,8 @@ class PropertyList extends React.Component {
 	}
 
 	searchBeds(val) {
-		var data = this.state.data;
+		var maxBedsArr = [];
+		var data = this.props.data;
 		for (var i = 0; i < data.length; i++) {
 			if(data[i].sleeps_max >= val) {
 				maxBedsArr.push(data[i]);

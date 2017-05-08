@@ -3,16 +3,16 @@ import React from 'react';
 class SearchBar extends React.Component {
 // declaring val in each function cuz scope
   changeOption(e) {
-    var val = e.target.value;
+    var val = e.currentTarget.value;
     this.props.changeOption(val);
   }
 
   searchBeds(e) {
-  	var val = e.target.value;
+  	var val = e.currentTarget.value;
   	this.props.searchBeds(val);
   }
-  render() {
 
+  render() {
     return (
       <div>
         <div className="filter">
