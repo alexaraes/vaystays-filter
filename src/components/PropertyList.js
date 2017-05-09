@@ -22,7 +22,7 @@ class PropertyList extends React.Component {
 
 	returnFilterState(val) {
 		this.setState({
-			data: this.props.data.sort(this.filterList(val))
+			data: this.state.data.sort(this.filterList(val))
 		})
 	}
 
