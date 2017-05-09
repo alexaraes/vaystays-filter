@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
     return (
       <div>
         <div className="filter">
-          <label>Filter By:</label>
+          <label>Sort By:</label>
           <select className="filter" onChange={this.changeOption.bind(this)}>
           	<option value='default'>Default</option>
           	<option value='user_rating'>User Rating</option>
